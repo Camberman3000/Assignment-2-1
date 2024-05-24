@@ -1,0 +1,131 @@
+<!--Define DodcType as html--> 
+<!DOCTYPE html>
+<!--Define html tag-->
+<html>
+<!--Define head tag-->
+<head>
+    <!--Define title tag-->
+    <title>BookWaves</title>
+    <!--Set Character Encoding-->
+    <meta charset="UTF-8">
+    <!--Set the viewport to the device width and scale so that the page is responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Define inline CSS-->
+    <!--Set images centered on screen-->
+    <style>
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        </style>
+</head>
+    <!--Define inline CSS-->
+    <body style="font-family: Arial, Helvetica, sans-serif; margin: 20px; background-color: rgb(255, 231, 179);">
+        <!--Header tag-->
+        <header>
+            <h1 style="text-align: center; font-size: 2.2em; color: brown;">BookWaves Online Bookstore</h1>
+            <h3 style="text-align: center; font-size: 1em;">We have a wide range of books and audio for you to choose from. Please feel free to browse through our collection</h3>
+        </header>
+        <!--Main content section-->
+        <!--Div tag-->
+        <!--First story link and content-->
+        <div style="margin-bottom: 20px;">
+            <!--Create a link to download first story-->
+            <a href="#TheCatsandtheTurtle" onclick="downloadTheCatsandtheTurtle('TheCatsandtheTurtle')" style="text-decoration: none; color: blue;"><p style="text-align: center; font-size: 20px;">Download Story: The Cats and the Turtle</p></a>
+            <p id="TheCatsandtheTurtle" style="display: none;">Once upon a time, there were two cats who lived in a small rural town. They were very good friends and always played together.
+                One day, they met a turtle who was looking for some friends. The cats were very happy to meet the turtle and they all became good friends. They played together 
+                every day and had a lot of fun. The cats and the turtle lived happily ever after.</p><br>
+                <img src='catsandturtle.jpg' style="width:500px;height:400px">
+                 
+        </div>
+        <!--JavaScript makes our webpage more interactive and more like a web application-->
+        <!--Create a JavaScript function that allows the user to download our stories as text files-->
+        <script>
+            function downloadTheCatsandtheTurtle(storyId) {
+                //Get the story content
+                var storyContent = document.getElementById(storyId).innerText;
+                //Create a new Blob object
+                var blob = new Blob([storyContent], { type: "text/plain" });
+                //Create a new URL object
+                var link = document.createElement("a");
+                //Set the href attribute of the link to the URL of the Blob object
+                link.href = URL.createObjectURL(blob);
+                //Set the download attribute of the link to the name of the story
+                link.download = storyId + ".txt";
+                // Programmatically click the link to trigger the download
+                link.click();                 
+            }
+        </script>
+         <!--Second story link and content-->
+         <div style="margin-bottom: 20px;">
+            <!--Create a link to download second story-->
+            <a href="#TheTimeTravelersGift" onclick="downloadTheTimeTravelersGift('TheTimeTravelersGift')" style="text-decoration: none; color: blue;"><p style="text-align: center; font-size: 20px;">Download Story: The Time Traveler's Gift</p></a>
+            <p id="TheTimeTravelersGift" style="display: none;">In a quiet village by the sea, there lived a young boy named Max. He was fascinated by stories of adventure and longed to explore the world beyond his village. One day, while exploring an abandoned lighthouse, Max discovered an old, intricately designed pocket watch.
+
+                As he examined the watch, it began to glow, and suddenly, Max found himself in a bustling market in ancient Egypt. Amazed and slightly bewildered, he realized that the pocket watch had the power to travel through time. Max embarked on an incredible journey, visiting ancient civilizations, witnessing historic events, and meeting legendary figures.
+                
+                In Rome, he watched gladiators in the Colosseum; in China, he marveled at the construction of the Great Wall; in medieval Europe, he met knights and witnessed grand tournaments. Everywhere he went, Max collected souvenirs and stories, each adventure more thrilling than the last.
+                
+                Eventually, Max returned to his village, now filled with a wealth of knowledge and experiences. He used his newfound wisdom to help his community, sharing stories and teaching about different cultures and histories. The villagers were amazed by his tales and grateful for his contributions.
+                
+                Max's adventures taught him that while exploring the world was exciting, the greatest gift was the ability to share his experiences and enrich the lives of others. The pocket watch, once a tool for personal adventure, became a symbol of knowledge and connection, reminding Max that the true magic of time travel was the gift of learning and sharing.</p><br>
+                <img src='timetraveler.jpg' style="width:500px;height:400px">
+                 
+        </div>
+        <!--JavaScript makes our webpage more interactive and more like a web application-->
+        <!--Create a JavaScript function that allows the user to download our stories as text files-->
+        <script>
+            function downloadTheTimeTravelersGift(storyId) {
+                //Get the story content
+                var storyContent = document.getElementById(storyId).innerText;
+                //Create a new Blob object
+                var blob = new Blob([storyContent], { type: "text/plain" });
+                //Create a new URL object
+                var link = document.createElement("a");
+                //Set the href attribute of the link to the URL of the Blob object
+                link.href = URL.createObjectURL(blob);
+                //Set the download attribute of the link to the name of the story
+                link.download = storyId + ".txt";
+                // Programmatically click the link to trigger the download
+                link.click();                 
+            }
+        </script>
+         <!--Third story link and content-->
+         <div style="margin-bottom: 20px;">
+            <!--Create a link to download Third story-->
+            <a href="#TheForgottenMelody" onclick="downloadTheForgottenMelody('TheForgottenMelody')" style="text-decoration: none; color: blue;"><p style="text-align: center; font-size: 20px;">Download Story: The Forgotten Melody</p></a>
+            <p id="TheForgottenMelody" style="display: none;">In the bustling city of Aria, there lived a talented musician named Elena. She played the violin with such passion that it seemed to echo the soul of the city itself. However, despite her talent, Elena struggled to find her place in the competitive world of music.
+
+                One evening, as she wandered through a quiet alley, she stumbled upon an old, forgotten music shop. Drawn inside by an invisible force, she discovered a dusty violin in the corner. Its wood was aged, and it looked as if it hadn't been played in decades. Intrigued, Elena picked it up and began to play.
+                
+                The moment her bow touched the strings, an ethereal melody filled the room. It was a hauntingly beautiful tune, unlike anything she had ever heard. The music seemed to tell a story of love, loss, and hope. As she played, Elena felt a connection to the violin, as if it was sharing its memories with her.
+                
+                Word of Elena's mesmerizing performance spread quickly, and soon, she was invited to play at the grand Aria Concert Hall. On the night of her performance, the hall was filled to capacity. As she played the forgotten melody, the audience was captivated. The music touched their hearts, bringing tears to their eyes and smiles to their faces.
+                
+                After the concert, an old man approached Elena. With a tear in his eye, he revealed that the violin had once belonged to his late wife, a renowned violinist. He had lost it years ago and never thought he would hear its music again. Elena realized that through her, the violin had found its way home.</p><br>
+                <img src='forgottenmelody.jpg' style="width:500px;height:400px">
+                 
+        </div>
+        <!--JavaScript makes our webpage more interactive and more like a web application-->
+        <!--Create a JavaScript function that allows the user to download our stories as text files-->
+        <script>
+            function downloadTheForgottenMelody(storyId) {
+                //Get the story content
+                var storyContent = document.getElementById(storyId).innerText;
+                //Create a new Blob object
+                var blob = new Blob([storyContent], { type: "text/plain" });
+                //Create a new URL object
+                var link = document.createElement("a");
+                //Set the href attribute of the link to the URL of the Blob object
+                link.href = URL.createObjectURL(blob);
+                //Set the download attribute of the link to the name of the story
+                link.download = storyId + ".txt";
+                // Programmatically click the link to trigger the download
+                link.click();                 
+            }
+        </script>
+    </body>
+
+</html>
+ 
